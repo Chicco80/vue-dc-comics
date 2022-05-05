@@ -1,12 +1,12 @@
 <template>
-<div class="thumbs">
-<div v-for="(item, index) in thumbs" :key="index"> 
-    <img :src="item.thumb" alt="">
-
+<div class="container">
+    <div class="thumbs">
+        <div v-for="(item, index) in thumbs" :key="index"> 
+            <img :src="item.thumb" alt="thumbs">
+        </div>
+    </div> 
+    <button>LOAD MORE</button>  
 </div>
-    
-</div>
-    
 </template>
 
 <script>
@@ -98,5 +98,19 @@ export default {
 <style scoped lang="scss">
 @import '../style/variables';
 
+.container{
+    background-color: #1C1C1C;    
+}
+.thumbs{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex: 0 1 auto;
+    padding: 15px;
+    gap: 20px;
+    margin: 0 auto;
+    
+}
 
 </style>
