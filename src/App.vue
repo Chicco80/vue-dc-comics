@@ -1,7 +1,15 @@
 <template>
   <div id="app">
     <app-header/>
-    <app-main/>
+    <main>
+      <app-main/>
+      <app-main-two/>
+    </main> 
+    <footer>
+      <app-footer/>
+      <app-footer-two/>
+      <app-footer-three/>
+    </footer>
   </div>
   
 </template>
@@ -9,6 +17,12 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import AppFooter from './components/AppFooter.vue'
+import AppFooterTwo from './components/AppFooterTwo.vue'
+import AppFooterThree from './components/AppFooterThree.vue'
+import AppMainTwo from './components/AppMainTwo.vue'
+
+
 
 
 export default {
@@ -16,6 +30,10 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    AppFooter,
+    AppFooterTwo,
+    AppFooterThree,
+    AppMainTwo,
   }
 }
 </script>
@@ -23,5 +41,6 @@ export default {
 <style lang="scss">
 @import './style/variables';
 @import './style/general';
+
 
 </style>

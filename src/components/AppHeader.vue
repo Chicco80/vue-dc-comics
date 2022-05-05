@@ -1,12 +1,12 @@
 <template>
-   <header>
-   <div class="logo"><img src="../assets/img/dc-logo.png" alt="logo"></div>
-   <nav>
-     <ul>
-       <li v-for="(item, index) in links" :key="index" :class="{'selected' : item.active}">{{item.testo}}</li>
-     </ul>
-   </nav>
- </header>
+<header>
+  <div class="logo"><img src="../assets/img/dc-logo.png" alt="logo"></div>
+    <nav>
+      <ul>
+        <li v-for="(item, index) in links" :key="index" :class="{'selected' : item.active}">{{item.testo}}</li>
+      </ul>
+    </nav>
+</header>
   
 </template>
 
@@ -76,12 +76,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../style/variables';
+
 header{
-  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  
+  align-items: center;
+  height: 110px;
+  font-size: 12px;
+  font-weight: bold;
+
 }
 
   ul{
@@ -90,8 +94,9 @@ header{
   li{
     padding: 10px;
     list-style-type: none;
+    
   }
   .selected{
-    text-decoration: underline;
+    border-bottom: 2px solid $blueFooter;
   }
 </style>
