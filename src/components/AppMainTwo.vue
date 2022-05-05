@@ -1,11 +1,17 @@
 <template>
 <div class="container">
+   <div class="btnTop">
+        <button>CURRENT SERIES</button>  
+    </div>
     <div class="thumbs">
-        <div v-for="(item, index) in thumbs" :key="index"> 
+        <div class="box" v-for="(item, index) in thumbs" :key="index"> 
             <img :src="item.thumb" alt="thumbs">
+            <p>{{item.series}}</p>
         </div>
     </div> 
-    <button>LOAD MORE</button>  
+    <div class="btn">
+        <button class="btnOne">LOAD MORE</button>  
+    </div>
 </div>
 </template>
 
@@ -100,17 +106,50 @@ export default {
 
 .container{
     background-color: #1C1C1C;    
+    position:relative;
+}
+
+.btnTop{
+  position: absolute;
+  left: 250px;
+  top: -40px;
+  padding:20px ;
+  
+
 }
 .thumbs{
-    width:80%;
+
+    width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap:wrap;
-    flex: 0 1 auto;
     padding: 15px;
     gap: 20px;
     margin: 0 auto;
     
+}
+img{
+    width: 185px;
+    height: 185px;
+}
+p{
+    color:white
+}
+.box{
+    width: 185px;
+    height: 185px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+}
+button{
+  background-color: $coloreLogo;
+  color:white;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 </style>

@@ -33,6 +33,7 @@ export default {
     align-items: center;
       height: 100px;
     background-color: $greyFooter;
+    z-index:1000;
 }
 .container{
     padding: 20px;

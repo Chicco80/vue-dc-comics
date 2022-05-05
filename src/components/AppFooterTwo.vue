@@ -1,7 +1,7 @@
 <template>
 <div class="center">
     <div class="row">
-        <div class="col-2">
+        <div class="col">
             <ul>
                 <li><a class="big" href="#">DC COMICS</a></li>
                 <li><a href="#"> Character</a></li>
@@ -19,7 +19,7 @@
                 </div>
             </ul>
         </div>
-        <div class="col-2">
+        <div class="col">
             <ul>
                 <li><a class="big" href="#">DC</a></li>
                 <li><a href="#">Tearms Of Use</a></li>
@@ -35,21 +35,20 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
-        <div class="col-2">
+        <div class="col">
                 <ul>
                 <li><a class="big" href="#">SITES</a></li>
                 <li><a href="#">DC</a></li>
                 <li><a href="#">DC Kids</a></li>
                 <li><a href="#">DC Universe</a></li>
                 <li><a href="#">DC Power Visa</a></li>
-
             </ul>
         </div>
-
-        <div class="col-6 logo ">
+          <div class="col logo ">
             <img class="logo-footer" src="../assets/img/dc-logo.png" alt="">
         </div>
     </div>
+      
 </div>
 </template>
 
@@ -62,13 +61,26 @@ export default {
 <style scoped lang="scss">
 @import '../style/variables';
 .center{
+    margin:0 auto;
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-image: url("../assets/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    padding-top: 50px;
+    position: relative;
+    overflow: hidden;
 }
 
-.logo-footer{
-    width: 350px;
+
+ .logo-footer{
+    position: absolute;
+    top:-30px;
+    right:350px;
+    width: 450px;
+    height: 450px;
+    transform: rotate(-30deg);
+    overflow: hidden;
 }
 li{
     list-style-type: none;
@@ -92,7 +104,12 @@ a{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.col{
+    padding:20px;
 }
 
 </style>

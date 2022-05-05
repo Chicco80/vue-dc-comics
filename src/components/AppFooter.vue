@@ -1,11 +1,11 @@
 <template>
 <div class="bck">
-<ul class="footer-icons">
-    <li v-for="(icon, index) in icons" :key="index"><img :src="icon.img" alt=""> {{icon.testo}}</li>
-</ul>
+    <ul class="footer-icons">
+        <li v-for="(icon, index) in icons" :key="index"><img :src="icon.img" alt=""> {{icon.testo}}</li>
+    </ul>
 </div>
     
-</template>//:src=" 'img/avatar'+ contacts[activeContactIndex].avatar +'.jpg'"
+</template>
 
 <script>
 export default {
@@ -14,23 +14,23 @@ export default {
         return{
             icons:[
                 {
-                    img: require('../assets/img/buy-comics-digital-comics.png'),
+                    img:'./img/buy-comics-digital-comics.png',
                     testo:'DIGITAL COMICS',
                 },
                 {
-                    img: '../assets/img/buy-comics-mercandise-comics.png',
+                    img: './img/buy-comics-merchandise.png',
                     testo:'DC MERCANDISE ',
                 },
                 {
-                    img:'../assets/img/buy-comics-shop-comics.png',
+                    img:'./img/buy-comics-shop-locator.png',
                     testo:'SUBSCRIPTION',
                 },
                 {
-                    img:'../assets/img/buy-comics-subscriptions-comics.png',
+                    img:'./img/buy-comics-subscriptions.png',
                     testo:'COMIC SHOP LOCATO',
                 },
                 {
-                    img:'../assets/img/buy-comics-power-comics.png',
+                    img:'./img/buy-dc-power-visa.svg',
                     testo:'DC POWER VISA',
                 },
             ],
@@ -56,5 +56,9 @@ export default {
     display: flex;
     justify-content: center;
      background-color: $blueFooter;
+}
+img{
+    width: 50px;
+    height: 50px;
 }
 </style>
